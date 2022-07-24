@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج ادارة حسابات الشركاء</title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="p-4 text-center"><h1 style="background-color: transparent;">برنامج ادارة حسابات الشركاء</h1></nav>
+
+    <section class="container py-5">
+        <div class="row gy-4">
+            <div class="col-lg-6 column pl-lg-5 pl-auto ">
+                <div class="card custom-card  h-100">
+                    <h2>العمليات المالية و الادارية</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#aqd_4araka_gded">
+                            <button class="mb-2 p-0">
+                                <img src="img/contract.jpg" alt="" class="w-100 h-100">
+                            </button>
+                            عقد شراكة جديد
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#mbe3at_4hria">
+                            <button class="mb-2">
+                                <img src="img/monthlySales.png" alt="" class="w-100 h-100">
+                            </button>
+                            المبيعات الشهرية
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#msaref_4hria">
+                            <button class="mb-2">
+                                <img src="img/monthlyExpenses.png" alt="" class="w-100 h-100">
+                            </button>
+                            المصاريف الشهرية
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#mbale8_tameen_4hria">
+                            <button class="mb-2">
+                                <img src="img/monthlyInsuranceAmounts.png" alt="" class="w-100 h-100">
+                            </button>
+                            مبالغ التأمين الشهرية
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 column pr-lg-5 pr-auto mt-lg-0 mt-4">
+                <div class="card custom-card  h-100">
+                    <h2>التقارير الادارية الشاملة</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#hesas_4orkaa">
+                            <button class="mb-2">
+                                <img src="img/PartnersShares.webp" alt="" class="w-100 h-100">
+                            </button>
+                            حصص الشركاء
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#takreer_4orkaa">
+                            <button class="mb-2">
+                                <img src="img/totalPartnerReport.png" alt="" class="w-100 h-100">
+                            </button>
+                            تقرير الشركاء الاجمالي
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#msaref_mo4trka">
+                            <button class="mb-2">
+                                <img src="img/SharedExpenses.png" alt="" class="w-100 h-100">
+                            </button>
+                            المصاريف المشتركة
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#mbale8_tameen">
+                            <button class="mb-2">
+                                <img src="img/insuranceAmounts.png" alt="" class="w-100 h-100">
+                            </button>
+                            مبالغ التأمين
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#msaref_45sia">
+                            <button class="mb-2">
+                                <img src="img/personalExpenses.png" alt="" class="w-100 h-100">
+                            </button>
+                            المصاريف الشخصية
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-8 column">
+                <div class="card custom-card">
+                    <h2 style="right: 35%;">العمليات المالية و الادارية</h2>
+                    <h2 style="right: 80%;">ادارة مدخلات البرنامج</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#st3lamat_4rkat">
+                            <button class="mb-2">
+                                <img src="img/newPartnershipContract.webp" alt="" class="w-100 h-100">
+                            </button>
+                            استعلامات الشركات
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#st3lamat_4rkaa">
+                            <button class="mb-2">
+                                <img src="img/partnerInquiries.png" alt="" class="w-100 h-100">
+                            </button>
+                            استعلامات الشركاء
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#edarat_mod5lat">
+                            <button class="mb-2">
+                                <img src="img/inputManagement.png" alt="" class="w-100 h-100">
+                            </button>
+                            ادارة المدخلات
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <!-- ادارة المدخلات > العقود -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="El3aood">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">اضافة عقد جديد</h5>
+                <div class="d-flex justify-content-between">
+             
+                    <div class="d-flex flex-column proccess mr-3">
+                        <button class="mb-2">
+                            <img src="img/save.png" alt="" class="w-100 h-100">
+                        </button>
+                        <span style="color: red;background-color: rgb(252, 223, 223, .5);">حفظ واغلاق</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-md-center align-items-center my-3 ">
+                    
+                   
+                        <div class="newInterfacemain py-5 h-20" style="border: 1px dashed black;position: relative;width: 50%;">
+                            <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">ازرار التنقل </h5>
+                            <div class=" px-2 d-flex justify-content-lg-around align-items-center">
+                              <div class="d-flex justify-content-lg-center align-items-center ">
+                                <span class="h5">السابق</span>
+                              <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+
+                              </div>
+                             <div class="d-flex justify-content-lg-center align-items-center">
+                                <span><i class="fa fa-caret-left" aria-hidden="true"></i></span>
+
+                                <span class="h5"> التالى</span>
+  
+                             </div>
+                            </div>
+                          </div>
+                          <div class="closeing mx-5">
+                            <i class="fa fa-window-close bg-danger p-3 text-white fs-5"></i><br>
+                            <h5 class="my-2">حذف العقد</h5>
+                        </div>
+
+                  </div>
+              
+                  <div class="row mt-5">
+                    <div class="newInterface col-md-6">
+                      <div class="newInterface1 py-5 h-100" style="border: 1px dashed black;position: relative;">
+                        <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">المعلومات الرئيسية</h5>
+                        <div class=" px-2">
+                          <div class="d-flex justify-content-between align-items-center my-3">
+                            <label class="mx-1" for="DateContract">تاريخ العقد </label>
+                            <input type="text" class="form-control w-75" name="DateContract" id="DateContract"><br>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center my-3">
+                            <label class="mx-1" for="CompanyName">كود عقد الشركة </label>
+                            <select name="code" id="CompanyName" class="w-75 form-control">
+                            </select><br>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center my-3">
+                            <label class="mx-1" for="Notes">ملاحظات </label>
+                            <textarea name="Notes" class="form-control w-75 " id="Notes" cols="10" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="newInterface col-md-6">
+                      <div class="newInterface2 py-5 h-100" style="border: 1px dashed black;position: relative;">
+                          <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">النسب المالية</h5>
+                          <div class=" px-2">
+                            <div class="d-flex justify-content-center align-items-center my-3">
+                              <label class="mx-1" for="CommissionRate">نسبة العمولة </label>
+                              <input type="text" class="form-control w-75" name="CommissionRate" id="CommissionRate"><br>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center my-3">
+                              <label class="mx-1" for="ManagementRatio">حصة الادارة </label>
+                              <input name="ManagementRatio" class="form-control w-75 " id="ManagementRatio">
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center my-3">
+                              <label class="mx-1" for="TaxNoticeRate">نسبة اشعارات الضرائب </label>
+                              <input name="TaxNoticeRate" class="form-control w-75 " id="TaxNoticeRate">
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+              
+              
+                  </div>
+                  <div class="row my-5">
+                    <div class="col-md-12">
+                      <div class="newInterface w-75 m-auto">
+                        <div style="border: 1px dashed black;position: relative;" class="m-auto w-75">
+                          <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details" style="transform: translate(-50%,-150%);">الشركاء</h5>
+                          <div class="">
+                            <div class="container pb-4">
+                                <div class="row align-items-center py-2" style="background-color: rgb(231, 222, 222,.6);">
+                                    <div class="col-3">كود العقد</div>
+                                    <div class="col-5">الشريك</div>
+                                    <div class="col-4">نسبة حصة الشريك</div>
+                                </div>
+                                <div class="px-4">
+                                    <div class="row partner">
+                                        <div class="col-3 p-0">
+                                            <select id="PartnerName" class="form-control w-100 h-100 rounded-0" readonly>
+                                                <option value="1">1</option>
+                                            </select> 
+                                        </div>
+                                        <div class="col-5 p-0">
+                                            <select id="PartnerName" class="w-100 h-100">
+                                            </select>
+                                        </div>
+                                        <div class="col-4 p-0">
+                                            <input type="text" class="form-control w-100 h-100 border-0 rounded-0" id="PartnerRatio">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ----------------------------------- -->
+    <!-- عقد شراكة جديد -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="aqd_4araka_gded">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">اضافة عقد جديد</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" id="aqd_4araka_gded_saveAndNew">
+                        <button class="mb-2">
+                            <img src="img/save.png" alt="" class="w-100 h-100">
+                        </button>
+                        <span>حفظ و جديد</span>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" id="aqd_4araka_gded_saveAndClose">
+                        <button class="mb-2">
+                            <img src="img/save.png" alt="" class="w-100 h-100">
+                        </button>
+                        <span style="color: red;background-color: rgb(252, 223, 223, .5);">حفظ واغلاق</span>
+                    </div>
+                </div>
+            </div>
+            <!-- contracts -->
+            <form action="" id="aqd_4araka_gded_form">
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center align-items-center my-3">
+                        <label class="mx-1" for="newcode">كود جديد </label>
+                        <input type="number " class="form-control contractCode" value="(New)" name="newcode" id="newcode" readonly><br>
+                      </div>
+                  
+                      <div class="row mt-5">
+                        <div class="newInterface col-md-6">
+                          <div class="newInterface1 py-5 h-100" style="border: 1px dashed black;position: relative;">
+                            <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">المعلومات الرئيسية</h5>
+                            <div class=" px-2">
+                              <div class="d-flex justify-content-between align-items-center my-3">
+                                <label class="mx-1" for="DateContract">تاريخ العقد </label>
+                                <input type="date" class="form-control w-75" name="DateContract" id="DateContract"><br>
+                              </div>
+                              <div class="d-flex align-items-center my-3">
+                                <label class="mx-1" for="Company"> الشركة </label>
+                                <input list="existCompanies" class="form-control w-75 m-auto" name="Company" id="Company">
+                                <datalist id="existCompanies" style="position: relative; left: 100%;top: 100%;" class="companies">
+                              
+                                </datalist>
+                                </div>
+                              <div class="d-flex justify-content-center align-items-center my-3">
+                                <label class="mx-1" for="Notes">ملاحظات </label>
+                                <textarea name="Notes" class="form-control w-75 " id="Notes" cols="10" rows="5"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="newInterface col-md-6">
+                          <div class="newInterface2 py-5 h-100" style="border: 1px dashed black;position: relative;">
+                              <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">النسب المالية</h5>
+                              <div class=" px-2">
+                                <div class="d-flex justify-content-center align-items-center my-3">
+                                  <label class="mx-1" for="CommissionRate">نسبة العمولة </label>
+                                  <input type="text" class="form-control w-75" name="CommissionRate" id="CommissionRate"><br>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center my-3">
+                                  <label class="mx-1" for="ManagementRatio">حصة الادارة </label>
+                                  <input name="ManagementRatio" class="form-control w-75 " id="ManagementRatio">
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center my-3">
+                                  <label class="mx-1" for="TaxNoticeRate">نسبة اشعارات الضرائب </label>
+                                  <input name="TaxNoticeRate" class="form-control w-75 " id="TaxNoticeRate">
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                  
+                  
+                      </div>
+                      <div class="row my-5">
+                        <div class="col-md-12">
+                          <div class="newInterface w-75 m-auto">
+                            <div style="border: 1px dashed black;position: relative;" class="m-auto w-75">
+                              <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details" style="transform: translate(-50%,-150%);">الشركاء</h5>
+                              <div class="">
+                                <div class="container pb-4">
+                                    <div class="row align-items-center py-2" style="background-color: rgb(231, 222, 222,.6);">
+                                        <div class="col-3">كود العقد</div>
+                                        <div class="col-5 text-center" >الشريك </div>
+                                        <div class="col-4">نسبة حصة الشريك</div>
+                                    </div>
+                                    <div class="px-4" id="addPartnersSection">
+                                        <div class="row partner">
+                                            <div class="col-3 p-0">
+                                                <input type="text" id="PartnerId" class="form-control w-100 h-100 border-0 rounded-0 text-center contractCode" style="border-left: 1px solid black !important;" readonly>
+                                            </div>
+                                            <div class="col-5 p-0">
+                                                
+                                                <input list="existPartners1" class="form-control w-100 h-100 border-0 text-center" name="Partner1" id="Partner1">
+                                                <datalist id="existPartners1" style="position: relative; left: 100%;top: 100%;" class="partners">
+                                                
+                                                </datalist>
+                                            </div>
+                                            <div class="col-4 p-0">
+                                                <input type="text" class="form-control w-100 h-100 border-0 rounded-0 text-center PartnerRatio" style="border-right: 1px solid black !important;" id="PartnerRatio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    <!-- المبيعات الشهرية -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mbe3at_4hria">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title text-center w-100" id="exampleModalLabel">اضافة مبالغ المبيعات الشهرية</h5>
+            </div>
+            <div class="modal-body py-5">
+                <form style="border: 1px dashed black;position: relative;" class="  d-flex  align-items-center   " >
+                    <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">تفاصيل العملية</h5>
+                           <div class=" py-5 pr-5 w-75 labels">
+                           <div class="d-flex justify-content-between align-items-center my-3">
+                            <label for="code" class="w-25" >كود العملية  </label>
+                            <input type="text" class="form-control w-50 text-center" name="code" id="code" value="(New)" readonly><br>
+                           </div>
+        
+        
+                            <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="mbe3at_4hria_date" class="w-25">تاريخ العملية (شهرى) </label>
+                            <input type="date"  class="form-control w-50" name="mbe3at_4hria_date" id="mbe3at_4hria_date"><br>
+                            </div>
+        
+        
+                           <div class="d-flex justify-content-between align-items-center my-3">
+                            <label for="mbe3at_4hria_interfaceCode" class="w-25">كود عقد الشركة </label>
+                            <select type="number" class="form-control w-50" name="mbe3at_4hria_interfaceCode" id="mbe3at_4hria_interfaceCode"></select><br>
+                           </div>
+                            
+                           <div class="d-flex justify-content-between align-items-center my-3">
+                            <label for="mbe3at_4hria_totalSales" class="w-25">اجمالى المبيعات </label>
+                            <input type="text" class="form-control w-50" name="mbe3at_4hria_totalSales" id="mbe3at_4hria_totalSales"><br>
+                           </div>
+                           
+                           <div class="d-flex justify-content-between align-items-center my-3">
+                            <label for="mbe3at_4hria_difference-amount" class="w-25">فرق مبلغ ايجار السيارات </label>
+                            <input type="text" class="form-control w-50" name="mbe3at_4hria_difference-amount" id="mbe3at_4hria_difference-amount"><br>
+                           </div>
+                            
+                           </div>
+                           <div class="d-flex flex-column proccess" id="add-monthly-sales-btn">
+                                <button class="mb-2">
+                                    <img src="img/$.png" alt="" class="w-100 h-100">
+                                </button>
+                                <span class="text-danger font-weight-bold">ترحيل العملية</span>
+                            </div>
+                        </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- المصاريف الشهرية -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="msaref_4hria">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between align-items-center">
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title text-center w-100" id="exampleModalLabel">اضافة المصاريف الشهرية</h5>
+                </div>
+                <div class="modal-body py-5">
+                    <form style="border: 1px dashed black;position: relative;" class="  d-flex  align-items-center   " >
+                        <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">تفاصيل العملية</h5>
+                               <div class=" py-5 pr-5 w-75 labels">
+                               <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="code" class="w-25" >كود العملية  </label>
+                                <input type="text" class="form-control w-50 text-center" name="code" id="code" value="(New)" readonly><br>
+                               </div>
+            
+                               <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="msaref_4hria_proccessType" class="w-25">نوع العملية* </label>
+                                <select type="number" class="form-control w-50" name="msaref_4hria_proccessType" id="msaref_4hria_proccessType">
+                                    <option value="1">مشتركة</option>
+                                    <option value="2">خاصة</option>
+
+                                </select><br>
+                               </div>
+
+                                <div class="d-flex justify-content-between align-items-center my-3">
+                                    <label for="msaref_4hria_Date" class="w-25">تاريخ العملية* </label>
+                                <input type="date"  class="form-control w-50" name="msaref_4hria_Date" id="msaref_4hria_Date"><br>
+                                </div>
+                                
+                               <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="msaref_4hria_value" class="w-25">قيمة المصاريف* </label>
+                                <input type="text" class="form-control w-50" name="msaref_4hria_value" id="msaref_4hria_value"><br>
+                               </div>
+                               
+                               <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="msaref_4hria_statement" class="w-25">البيان* </label>
+                                <textarea class="form-control w-50" name="msaref_4hria_statement" id="msaref_4hria_statement"></textarea><br>
+                               </div>
+                                
+                               </div>
+                               <div class="d-flex flex-column proccess" id="add_monthly_expenses_btn">
+                                    <button class="mb-2">
+                                        <img src="img/$.png" alt="" class="w-100 h-100">
+                                    </button>
+                                    <span class="text-danger font-weight-bold">ترحيل العملية</span>
+                                </div>
+                            </form>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- مبالغ التأمين الشهرية -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mbale8_tameen_4hria">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between align-items-center">
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title text-center w-100" id="exampleModalLabel">اضافة مبالغ التأمين الشهرية</h5>
+                </div>
+                <div class="modal-body py-5">
+                    <form style="border: 1px dashed black;position: relative;" class="  d-flex  align-items-center   " >
+                        <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">تفاصيل العملية</h5>
+                               <div class=" py-5 pr-5 w-75 labels">
+                               <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="code" class="w-25" >كود العملية  </label>
+                                <input type="text" class="form-control w-50 text-center" name="code" id="code" value="(New)" readonly><br>
+                               </div>
+            
+            
+                                <div class="d-flex justify-content-between align-items-center my-3">
+                                    <label for="mbale8_tameen_4hria_date" class="w-25">تاريخ العملية (شهرى)* </label>
+                                <input type="date"  class="form-control w-50" name="mbale8_tameen_4hria_date" id="mbale8_tameen_4hria_date"><br>
+                                </div>
+            
+            
+                               <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="mbale8_tameen_4hria_interfaceCode" class="w-25">كود عقد الشركة* </label>
+                                <select type="number" class="form-control w-50" name="mbale8_tameen_4hria_interfaceCode" id="mbale8_tameen_4hria_interfaceCode"></select><br>
+                               </div>
+                                
+                               <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="mbale8_tameen_4hria_total_ammount" class="w-25">اجمالى مبلغ التامين* </label>
+                                <input type="text" class="form-control w-50" name="mbale8_tameen_4hria_total_ammount" id="mbale8_tameen_4hria_total_ammount"><br>
+                               </div>
+                               
+                               <div class="d-flex justify-content-between align-items-center my-3">
+                                <label for="mbale8_tameen_4hria_peopleNumber" class="w-25">عدد الافراد المؤمن عليهم*</label>
+                                <input type="text" class="form-control w-50" name="mbale8_tameen_4hria_peopleNumber" id="mbale8_tameen_4hria_peopleNumber"><br>
+                               </div>
+                                
+                               </div>
+                               <div class="d-flex flex-column proccess" id="add_monthly_insuranceAmmount_btn">
+                                    <button class="mb-2">
+                                        <img src="img/$.png" alt="" class="w-100 h-100">
+                                    </button>
+                                    <span class="text-danger font-weight-bold">ترحيل العملية</span>
+                                </div>
+                            </form>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- حصص الشركاء -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="hesas_4orkaa">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between align-items-center">
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">تقرير الشركاء</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column proccess" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/printer.png" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container-fluid p-0 w-100">
+                        <table class="  bg-white w-100  col-sm-12 table-hover table-responsive-md table-responsive-sm">
+                            <thead class=" table-warning">
+                                <th>الشهر</th>
+                                <th>الشركه</th>
+                                <th>مبلغ المبيع</th>
+                                <th>مبلغ العمولة</th>
+                                <th>اشعارات الضرائب</th>
+                                <th>صافى مبلغ العمولة</th>
+                                <th>حصة الادارة</th>
+                                <th>صافى العموله دون حصة الادارة</th>
+                                <th>فرق مبلغ ايجار السيارات</th>
+                                <th>الشريك</th>
+                                <th>صافى مبلغ السيارات لكل شريك</th>
+                                <th>صافى حصة الشريك</th>
+                                <th>اجمالى حصة الشريك</th>   
+                            </thead>
+                            
+                            <tbody>
+                                 <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>نوال</td>
+                                    <td>00.0</td>
+                                    <td>00.0</td>
+                                    <td>00.0</td>
+                                    
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>ياسمين</td>
+                                    <td>00.0</td>
+                                    <td>00.0</td>
+                                    <td>00.0</td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>هشام</td>
+                                    <td>00.0</td>
+                                    <td>00.0</td>
+                                    <td>00.0</td>  
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-danger">اجمالي الشهر</td>
+                                    <td>00.0</td>
+                                    <td>00.0</td>
+                                 </tr>
+                              
+                                
+                            </tbody>
+                        </table>
+                 
+                        <div class="row pb-4">
+                            <div class="col-md-6 mt-5 text-md-center">
+                                <p class="h4">Page 1 of 1</p>
+                            </div>
+                            <div class="col-md-6 mt-5 text-md-center">
+                                <p class="h4">Tuesday, May 31, 2022</p>
+                            </div>
+                 
+                           
+                        </div>
+                      
+                 
+                       
+                     </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- تقرير الشركاء الاجمالي -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="takreer_4orkaa">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between align-items-center">
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">تقرير الشركاء الاجمالي</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column proccess" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/printer.png" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body p-0">
+                    <table class="table-hover table-responsive-md table-responsive-sm  bg-white w-100 text-center ">
+                        <thead class="table-warning">
+                            <th>الشهر</th>
+                            <th>كود الشريك</th>
+                            <th>الشريك</th>
+                            <th>اجمالى حصص الشريك</th>
+                            <th>اجمالى مبالغ التأمين</th>
+                            <th>اجمالى المصاريف المشتركه</th>
+                            
+                        </thead>
+                        <tbody>
+                            <tr>
+                           
+                             
+                            </tr>
+                      
+                    
+                              
+                           
+                            
+                        </tbody>
+                    </table>
+            
+                    <div class="row pb-4">
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="">Page 1 of 1</p>
+                        </div>
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="">Tuesday, May 31, 2022</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- المصاريف المشتركة -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="msaref_mo4trka">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between align-items-center">
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">تقرير المصاريف الشهرية المشتركة</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column proccess" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/printer.png" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container-fluid p-0">
+                        <table class="  bg-white w-100  table-hover table-responsive-md table-responsive-sm">
+                            <thead class=" table-warning">
+                                <th>التاريخ</th>
+                                <th> كود العقد</th>
+                                <th>الشركة</th>
+                                <th>عدد الشركاء</th>
+                                <th >الشريك</th>
+                                <th>كود المصروفات</th>
+                                <th>اجمالى المبلغ</th>
+                                <th>نسبة الشريك من المصاريف</th>
+                                <th>البيان</th>
+                                
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>      
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="color: brown;font-weight: bold;">اجمالى الشريك</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>00.0</td>
+                                    <td></td>      
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="color: brown;font-weight: bold;">الاجمالى الشهرى</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>00.0</td>
+                                    <td></td>      
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="color: brown;font-weight: bold;">الاجمالى الكلى</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>00.0</td>
+                                    <td></td>      
+                                </tr>
+                          
+                        
+                                  
+                               </tr>
+                                
+                            </tbody>
+                        </table>
+                 
+                 
+                 
+                        <div class="row pb-4">
+                            <div class="col-md-6 col-sm-12 mt-5 text-md-center">
+                                <p class="h4">Page 1 of 1</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mt-5 text-md-center">
+                                <p class="h4">Tuesday, May 31, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- مبالغ التأمين -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mbale8_tameen">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between align-items-center">
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">تقرير مبالغ التأمين الشهرية</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column proccess" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/printer.png" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container-fluid p-0 w-100">
+                        <table class="  bg-white w-100  col-sm-12 table-hover table-responsive-md table-responsive-sm">
+                            <thead class=" table-warning">
+                                <th>الشهر</th>
+                                <th>كود العملية</th>
+                                <th>الشركة</th>
+                                <th>مبلغ التأمين الكلى</th>
+                                <th>عدد الشركاء</th>
+                                <th>ما يتحمله الفرد</th>
+                                <th>ما تتحمله المنشأة</th>
+                                <th>اجمالى مبلغ التأمين</th>
+                                
+                                <th>الشريك</th>
+                                
+                                <th>صافى مبلغ التأمين الخاص بالشريك</th>
+                               
+                                
+                            </thead>
+                            
+                            <tbody>
+                                 <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>  
+                                    <td></td>                                   
+                                    <td></td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>  
+                                    <td>نوال</td>                                   
+                                    <td>-17,777.78</td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="color: brown;font-weight: bold;">اجمالى الشهر</td>                                   
+                                    <td>00.0</td>
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>                                   
+                                    <td style="color: brown;font-weight: bold;">اجمالى الكلى</td>                                  
+                                    <td>00.0</td>
+                                 </tr>
+                                  
+                              
+                                
+                            </tbody>
+                        </table>
+                 
+                        <div class="row pb-4">
+                            <div class="col-md-6 mt-5 text-md-center">
+                                <p class="h4">Page 1 of 1</p>
+                            </div>
+                            <div class="col-md-6 mt-5 text-md-center">
+                                <p class="h4">Tuesday, May 31, 2022</p>
+                            </div>
+                 
+                           
+                        </div>
+                      
+                 
+                       
+                     </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- المصاريف الشخصية -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="msaref_45sia">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between align-items-center">
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title" id="exampleModalLabel">تقرير المصاريف الشهرية الشخصية بالشركاء</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column proccess" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                            <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                                <img src="img/printer.png" alt="" class="w-100 h-100">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="container-fluid p-0 w-100">
+                        <table class="  bg-white w-100  col-sm-12 table-hover table-responsive-md table-responsive-sm">
+                            <thead class=" table-warning">
+                                <th>الشهر</th>
+                                <th> الشريك</th>
+                                <th>كود العمليه</th>
+                                <th>قيمة المصروف</th>
+                                <th>التاريخ</th>
+                                <th>البيان</th>
+                               
+                                
+                            </thead>
+                            
+                            <tbody>
+                                 <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="color: brown;font-weight: bold;">اجمالى الشريك</td>                                   
+                                    <td>00.0</td>
+                                    <td></td>
+                                    <td></td> 
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="color: brown;font-weight: bold;">الاجمالى الشهري</td>                                   
+                                    <td>00.0</td>
+                                    <td></td>
+                                    <td></td> 
+                                 </tr>
+                                 <tr>
+                                    <td></td>
+                                    <td></td>                                   
+                                    <td style="color: brown;font-weight: bold;">الاجمالى الكلى</td>                                  
+                                    <td>00.0</td>
+                                    <td></td>
+                                    <td></td> 
+                                 </tr>
+                                  
+                              
+                                
+                            </tbody>
+                        </table>
+                 
+                        <div class="row pb-4">
+                            <div class="col-md-6 mt-5 text-md-center">
+                                <p class="h4">Page 1 of 1</p>
+                            </div>
+                            <div class="col-md-6 mt-5 text-md-center">
+                                <p class="h4">Tuesday, May 31, 2022</p>
+                            </div>
+                 
+                           
+                        </div>
+                      
+                 
+                       
+                     </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- استعلامات الشركات -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="st3lamat_4rkat">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title text-center w-100" id="exampleModalLabel">استعلامات الشركات</h5>
+            </div>
+            <div class="modal-body py-5">
+                <div class="elsherkaName my-5 d-flex justify-content-center ">
+            
+            
+            
+                    <div style="border: 1px dashed black;position: relative;" class="all    w-50" >
+                       <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">عقد الشركة</h5>
+        
+        
+                       <div class="row text-center  p-5">
+                           <div class="col-md-12">
+                              <select class="form-control" name="nameOfSherka" id="nameOfSherka">
+                                <option value="1" selected disabled>اسم الشركة</option>
+                              </select>
+                           </div>
+                      
+                      
+                           </div>
+                           
+                 
+                    </div>
+        
+                    </div>
+               
+                
+                <div class="elsherkaAbout mt-5 d-flex justify-content-center ">
+                    
+                    
+                    
+                    <div style="border: 1px dashed black;position: relative;" class="all w-75" >
+                       <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">التقارير</h5>
+        
+        
+                       <div class="d-flex justify-content-between align-items-center text-center p-5">
+                        
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#Ist3lamhesas_4orkaa2">
+                            <button class="mb-2">
+                                <img src="img/PartnersShares.webp" alt="" class="w-100 h-100">
+                            </button>
+                            حصص الشركاء
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#Ist3lamMbale8_tameen2">
+                            <button class="mb-2">
+                                <img src="img/insuranceAmounts.png" alt="" class="w-100 h-100">
+                            </button>
+                            مبالغ التأمينات
+                        </div>
+                        <div class="d-flex flex-column proccess" data-toggle="modal" data-target="#Ist3lmMsaref_mo4trka2">
+                            <button class="mb-2">
+                                <img src="img/SharedExpenses.png" alt="" class="w-100 h-100">
+                            </button>
+                            المصاريف المشتركة
+                        </div>
+                 
+                     
+                       </div>
+                      
+                           </div>
+                           
+                 
+                    </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- استعلامات الشركاء -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="st3lamat_4rkaa">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title text-center w-100" id="exampleModalLabel">استعلامات الشركاء</h5>
+            </div>
+            <div class="modal-body py-5">
+                <div class="elsherkaName my-5 d-flex justify-content-center ">
+            
+            
+            
+                    <div style="border: 1px dashed black;position: relative;" class="all w-50" >
+                       <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">الشريك</h5>
+        
+        
+                       <div class="row text-center  p-5">
+                           <div class="col-md-12">
+                              <select class="form-control" name="nameOfShrek" id="nameOfShrek">
+                                <option value="1" selected disabled>اسم الشريك</option>
+                              </select>
+                           </div>
+                      
+                      
+                           </div>
+                           
+                 
+                    </div>
+        
+                    </div>
+               
+                
+                <div class="elsherkaAbout mt-5 d-flex justify-content-center ">
+                    
+                    
+                    
+                    <div style="border: 1px dashed black;position: relative;" class="all w-75" >
+                       <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">التقارير</h5>
+        
+        
+                       <div class="d-flex justify-content-between align-items-center text-center p-5">
+                        <div class="d-flex flex-column proccess" >
+                            <button class="mb-2">
+                                <img src="img/totalPartnerReport.png" alt="" class="w-100 h-100" data-toggle="modal" data-target="#Ist3lamtakreer_4orkaa">
+                            </button>
+                            تقرير الشركاء الاجمالي
+                        </div>
+                        <div class="d-flex flex-column proccess">
+                            <button class="mb-2">
+                                <img src="img/PartnersShares.webp" alt="" class="w-100 h-100" data-toggle="modal" data-target="#Ist3lamhesas_4orkaa">
+                            </button>
+                            حصص الشركاء
+                        </div>
+                        <div class="d-flex flex-column proccess">
+                            <button class="mb-2">
+                                <img src="img/insuranceAmounts.png" alt="" class="w-100 h-100" data-toggle="modal" data-target="#Ist3lamMbale8_tameen">
+                            </button>
+                            مبالغ التأمينات
+                        </div>
+                        <div class="d-flex flex-column proccess">
+                            <button class="mb-2">
+                                <img src="img/SharedExpenses.png" alt="notFound" class="w-100 h-100" data-toggle="modal" data-target="#Ist3lmMsaref_mo4trka">
+                            </button>
+                            المصاريف المشتركة
+                        </div>
+                        <div class="d-flex flex-column proccess" >
+                            <button class="mb-2" data-toggle="modal" data-target="#Ist3lamMsaref_45sia">
+                                <img src="img/personalExpenses.png" alt="" class="w-100 h-100" >
+                            </button>
+                            المصاريف الشخصية
+                        </div>
+                 
+                     
+                       </div>
+                      
+                           </div>
+                           
+                 
+                    </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- ادارة المدخلات -->
+    <div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="edarat_mod5lat">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title text-center w-100" id="exampleModalLabel">ادارة مدخلات البرنامج</h5>
+            </div>
+            <div class="modal-body py-5">
+                <div style="border: 1px dashed black;position: relative;" class="all    " >
+                    <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">المدخلات</h5>
+     
+     
+                    <div class="row d-flex justify-content-between align-items-center text-center p-5">
+                        <div class="col-md-4 d-flex flex-column proccess" data-toggle="modal" data-target="#El3aood">
+                            <button class="mb-2">
+                                <img src="img/contracts.png" alt="" class="w-100 h-100">
+                            </button>
+                            العقود
+                        </div>
+                        <div class="col-md-4 d-flex flex-column proccess" data-toggle="modal" data-target="#elshrek">
+                            <button class="mb-2">
+                                <img src="img/partners.png" alt="" class="w-100 h-100">
+                            </button>
+                            الشركاء
+                        </div>
+                        
+                         <div class="col-md-4 d-flex flex-column proccess" data-toggle="modal" data-target="#elsherka">
+                            <button class="mb-2">
+                                <img src="img/newPartnershipContract.webp" alt="" class="w-100 h-100">
+                            </button>
+                            الشركات
+                        </div>
+                     
+                     <div class="col-md-4 mt-5 d-flex flex-column proccess" data-toggle="modal" data-target="#elmabe3at">
+                        <button class="mb-2">
+                            <img src="img/salesProcess.jpg" alt="" class="w-100 h-100">
+                        </button>
+                        عمليات المبيع
+                    </div>
+                     
+                     <div class="col-md-4 mt-5 d-flex flex-column proccess" data-toggle="modal" data-target="#elmsaref">
+                        <button class="mb-2">
+                            <img src="img/expenseOperations.png" alt="" class="w-100 h-100">
+                        </button>
+                        عمليات المصاريف
+                    </div>
+                     
+                     <div class="col-md-4 mt-5 d-flex flex-column proccess" data-toggle="modal" data-target="#eltamen">
+                        <button class="mb-2">
+                            <img src="img/insuranceOperations.webp" alt="" class="w-100 h-100">
+                        </button>
+                        عمليات التأمين
+                    </div>
+                     
+                    </div>
+                   
+                        </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------مدخلات الشركات-------------------------------------------------------- -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="elsherka" tabindex="-1" aria-labelledby="elsherkaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center ">
+            <div class="">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="">
+              <h5 class="modal-title" id="elsherkaLabel">ادارة الشركات</h5>
+            </div>
+        </div>
+        <div class="modal-body">
+         
+    <section class="company">
+        <h1 class=" text-center py-2 " style="background-color: rgb(231, 222, 222,.6);">ادارة الشركات</h1>
+        <div class="container">
+           <table class="table-hover table-responsive-md table-responsive-sm  bg-white w-100 text-center ">
+               <thead class="table-warning">
+                   
+                   <th>كود الشركه</th>
+                   <th>اسم الشركه</th>
+                   
+                   <th>رقم الهاتف</th>
+                   <th>العنوان</th>
+                   
+               </thead>
+               <tbody>
+                   <tr>
+                  
+                    
+                   </tr>
+             
+           
+                     
+                  
+                   
+               </tbody>
+           </table>
+   
+           <div class="row pb-4">
+               <div class="col-md-6 mt-5 text-md-center">
+                   <p class="">Page 1 of 1</p>
+               </div>
+               <div class="col-md-6 mt-5 text-md-center">
+                   <p class="">Tuesday, May 31, 2022</p>
+                  
+               </div>
+           </div>
+           
+   
+          
+        </div>
+    </section>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- --------------------------------------------------------------------مدخلات الشريك--------------------------------------------------- -->
+
+  <div class="modal fade" id="elshrek" tabindex="-1" aria-labelledby="elshrekLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+            <div class="">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="">
+              <h5 class="modal-title" id="elsherkLabel">ادارة الشركاء</h5>
+            </div>
+        </div>
+        <div class="modal-body">
+            <section class="client">
+                <h1 class=" text-center py-2 " style="background-color: rgb(231, 222, 222,.6);">ادارة الشركاء</h1>
+                <div class="container">
+                   <table class="table-hover table-responsive-md table-responsive-sm  bg-white w-100 text-center ">
+                       <thead class="table-warning">
+                           
+                           <th>كود الشريك</th>
+                           <th>اسم الشريك</th>
+                           
+                           <th>رقم الهاتف</th>
+                           <th>العنوان</th>
+                           <th>الملاحظات</th>
+                       </thead>
+                       <tbody>
+                           <tr>
+                          
+                            
+                           </tr>
+                     
+                   
+                             
+                          
+                           
+                       </tbody>
+                   </table>
+           
+                   <div class="row pb-4">
+                       <div class="col-md-6 mt-5 text-md-center">
+                           <p class="">Page 1 of 1</p>
+                       </div>
+                       <div class="col-md-6 mt-5 text-md-center">
+                           <p class="">Tuesday, May 31, 2022</p>
+                          
+                       </div>
+                   </div>
+                   
+           
+                  
+                </div>
+            </section>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+<!-- -------------------------------------------------------------------مدخلات التامين---------------------------------------------------- -->
+
+<div class="modal fade" id="eltamen" tabindex="-1" aria-labelledby="eltamenLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+            <div class="">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="">
+              <h5 class="modal-title" id="eltamenLabel">ادارة عمليات التأمين</h5>
+            </div>
+        </div>
+        <div class="modal-body">
+            <section class="client">
+                <h1 class=" text-center py-2 " style="background-color: rgb(231, 222, 222,.6);">ادارة عمليات التأمينات</h1>
+                <div class="container">
+                   <table class="table-hover table-responsive-md table-responsive-sm  bg-white w-100 text-center ">
+                       <thead class="table-warning">
+                           
+                           <th>كود العملية</th>
+                           <th>تاريخ العملية </th>
+                           
+                           <th>عقد الشركة </th>
+                           <th>عدد العاملين</th>
+                           <th>مبلغ التأمين</th>
+                       </thead>
+                       <tbody>
+                           <tr>
+                          
+                            
+                           </tr>
+                     
+                   
+                             
+                          
+                           
+                       </tbody>
+                   </table>
+           
+                   <div class="row pb-4">
+                       <div class="col-md-6 mt-5 text-md-center">
+                           <p class="">Page 1 of 1</p>
+                       </div>
+                       <div class="col-md-6 mt-5 text-md-center">
+                           <p class="">Tuesday, May 31, 2022</p>
+                          
+                       </div>
+                   </div>
+                   
+           
+                  
+                </div>
+            </section>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ---------------------------------------------------------------عمليات المصاريف-------------------------------------------------------- -->
+  <div class="modal fade" id="elmsaref" tabindex="-1" aria-labelledby="elmsarefLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+            <div class="">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="">
+              <h5 class="modal-title" id="elmsarefLabel">ادارة عمليات المصاريف</h5>
+            </div>
+        </div>
+        <div class="modal-body">
+            <section class="client">
+                <h1 class=" text-center py-2 " style="background-color: rgb(231, 222, 222,.6);">ادارة المصاريف </h1>
+                <div class="container">
+                   <table class="table-hover table-responsive-md table-responsive-sm  bg-white w-100 text-center ">
+                       <thead class="table-warning">
+                           
+                           <th>كود العملية</th>
+                           <th>تاريخ العملية </th>
+                           
+                           <th>نوع المصاريف  </th>
+                          
+                           <th>العقد </th>
+                           <th>الشريك </th>
+                           <th>القيمة </th>
+                           <th>البيان </th>
+
+                       </thead>
+                       <tbody>
+                           <tr>
+                          
+                            
+                           </tr>
+                     
+                   
+                             
+                          
+                           
+                       </tbody>
+                   </table>
+           
+                   <div class="row pb-4">
+                       <div class="col-md-6 mt-5 text-md-center">
+                           <p class="">Page 1 of 1</p>
+                       </div>
+                       <div class="col-md-6 mt-5 text-md-center">
+                           <p class="">Tuesday, May 31, 2022</p>
+                          
+                       </div>
+                   </div>
+                   
+           
+                  
+                </div>
+            </section>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------------------عمليات المبيعات-------------------------------------------------------- -->
+  <div class="modal fade" id="elmabe3at" tabindex="-1" aria-labelledby="elmabe3atLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+            <div class="">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="">
+              <h5 class="modal-title" id="elmabe3atLabel">ادارة المبيعات </h5>
+            </div>
+        </div>
+        <div class="modal-body">
+            <section class="client">
+                <h1 class=" text-center py-2 " style="background-color: rgb(231, 222, 222,.6);">ادارة المبيعات </h1>
+                <div class="container">
+                   <table class="table-hover table-responsive-md table-responsive-sm  bg-white w-100 text-center ">
+                       <thead class="table-warning">
+                           
+                           <th>كود العملية</th>
+                           <th>تاريخ العملية </th>
+
+                           <th>العقد </th>
+                           <th>مبلغ المبيعات </th>
+                           <th>فرق مبلغ ايجار السيارات </th>
+ 
+
+                       </thead>
+                       <tbody>
+                           <tr>
+                          
+                            
+                           </tr>
+                     
+                   
+                             
+                          
+                           
+                       </tbody>
+                   </table>
+           
+                   <div class="row pb-4">
+                       <div class="col-md-6 mt-5 text-md-center">
+                           <p class="">Page 1 of 1</p>
+                       </div>
+                       <div class="col-md-6 mt-5 text-md-center">
+                           <p class="">Tuesday, May 31, 2022</p>
+                          
+                       </div>
+                   </div>
+                   
+           
+                  
+                </div>
+            </section>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+  <!-- استعلامات الشركاء > المصاريف الشخصية -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="Ist3lamMsaref_45sia">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">تقرير المصاريف الشهرية الشخصية بالشركاء</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/printer.png" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="container-fluid p-0 w-100">
+                    <table class="  bg-white w-100  col-sm-12 table-hover table-responsive-md table-responsive-sm">
+                        <thead class=" table-warning">
+                            <th>الشهر</th>
+                            <th> الشريك</th>
+                            <th>كود العمليه</th>
+                            <th>قيمة المصروف</th>
+                            <th>التاريخ</th>
+                            <th>البيان</th>
+                           
+                            
+                        </thead>
+                        
+                        <tbody>
+                             <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">اجمالى الشريك</td>                                   
+                                <td>00.0</td>
+                                <td></td>
+                                <td></td> 
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">الاجمالى الشهري</td>                                   
+                                <td>00.0</td>
+                                <td></td>
+                                <td></td> 
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>                                   
+                                <td style="color: brown;font-weight: bold;">الاجمالى الكلى</td>                                  
+                                <td>00.0</td>
+                                <td></td>
+                                <td></td> 
+                             </tr>
+                              
+                          
+                            
+                        </tbody>
+                    </table>
+             
+                    <div class="row pb-4">
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Page 1 of 1</p>
+                        </div>
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Tuesday, May 31, 2022</p>
+                        </div>
+             
+                       
+                    </div>
+                  
+             
+                   
+                 </div>
+            </div>
+          </div>
+    </div>
+</div>
+  <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+<!-- ااستعلامات الشركاء > المصاريف المشتركة -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="Ist3lmMsaref_mo4trka">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">تقرير المصاريف الشهرية المشتركة</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/printer.png" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="container-fluid p-0">
+                    <table class="  bg-white w-100  table-hover table-responsive-md table-responsive-sm">
+                        <thead class=" table-warning">
+                            <th>التاريخ</th>
+                            <th> كود العقد</th>
+                            <th>الشركة</th>
+                            <th>عدد الشركاء</th>
+                            <th >الشريك</th>
+                            <th>كود المصروفات</th>
+                            <th>اجمالى المبلغ</th>
+                            <th>نسبة الشريك من المصاريف</th>
+                            <th>البيان</th>
+                            
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>      
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">اجمالى الشريك</td>
+                                <td></td>
+                                <td></td>
+                                <td>00.0</td>
+                                <td></td>      
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">الاجمالى الشهرى</td>
+                                <td></td>
+                                <td></td>
+                                <td>00.0</td>
+                                <td></td>      
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">الاجمالى الكلى</td>
+                                <td></td>
+                                <td></td>
+                                <td>00.0</td>
+                                <td></td>      
+                            </tr>
+                      
+                    
+                              
+                           </tr>
+                            
+                        </tbody>
+                    </table>
+             
+             
+             
+                    <div class="row pb-4">
+                        <div class="col-md-6 col-sm-12 mt-5 text-md-center">
+                            <p class="h4">Page 1 of 1</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-5 text-md-center">
+                            <p class="h4">Tuesday, May 31, 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+    </div>
+</div>
+ <!-- -------------------------------------- -->
+    
+
+<!-- ااستعلامات الشركاء > مبالغ التأمينات -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="Ist3lamMbale8_tameen">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">تقرير مبالغ التأمين الشهرية</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/printer.png" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="container-fluid p-0 w-100">
+                    <table class="  bg-white w-100  col-sm-12 table-hover table-responsive-md table-responsive-sm">
+                        <thead class=" table-warning">
+                            <th>الشهر</th>
+                            <th>كود العملية</th>
+                            <th>الشركة</th>
+                            <th>مبلغ التأمين الكلى</th>
+                            <th>عدد الشركاء</th>
+                            <th>ما يتحمله الفرد</th>
+                            <th>ما تتحمله المنشأة</th>
+                            <th>اجمالى مبلغ التأمين</th>
+                            
+                            <th>الشريك</th>
+                            
+                            <th>صافى مبلغ التأمين الخاص بالشريك</th>
+                           
+                            
+                        </thead>
+                        
+                        <tbody>
+                             <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>  
+                                <td></td>                                   
+                                <td></td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>  
+                                <td>نوال</td>                                   
+                                <td>-17,777.78</td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">اجمالى الشهر</td>                                   
+                                <td>00.0</td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>                                   
+                                <td style="color: brown;font-weight: bold;">اجمالى الكلى</td>                                  
+                                <td>00.0</td>
+                             </tr>
+                              
+                          
+                            
+                        </tbody>
+                    </table>
+             
+                    <div class="row pb-4">
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Page 1 of 1</p>
+                        </div>
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Tuesday, May 31, 2022</p>
+                        </div>
+             
+                       
+                    </div>
+                  
+             
+                   
+                 </div>
+            </div>
+          </div>
+    </div>
+</div>
+ <!-- -------------------------------------- -->
+
+   <!-- ااستعلامات الشركاء > حصص الشركاء -->
+   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="Ist3lamhesas_4orkaa">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">تقرير الشركاء</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/printer.png" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="container-fluid p-0 w-100">
+                    <table class="  bg-white w-100  col-sm-12 table-hover table-responsive-md table-responsive-sm">
+                        <thead class=" table-warning">
+                            <th>الشهر</th>
+                            <th>الشركه</th>
+                            <th>مبلغ المبيع</th>
+                            <th>مبلغ العمولة</th>
+                            <th>اشعارات الضرائب</th>
+                            <th>صافى مبلغ العمولة</th>
+                            <th>حصة الادارة</th>
+                            <th>صافى العموله دون حصة الادارة</th>
+                            <th>فرق مبلغ ايجار السيارات</th>
+                            <th>الشريك</th>
+                            <th>صافى مبلغ السيارات لكل شريك</th>
+                            <th>صافى حصة الشريك</th>
+                            <th>اجمالى حصة الشريك</th>   
+                        </thead>
+                        
+                        <tbody>
+                             <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>نوال</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                                
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ياسمين</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>هشام</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                                <td>00.0</td>  
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-danger">اجمالي الشهر</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                             </tr>
+                          
+                            
+                        </tbody>
+                    </table>
+             
+                    <div class="row pb-4">
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Page 1 of 1</p>
+                        </div>
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Tuesday, May 31, 2022</p>
+                        </div>
+             
+                       
+                    </div>
+                  
+             
+                   
+                 </div>
+            </div>
+          </div>
+    </div>
+</div>
+ <!-- -------------------------------------- -->
+
+   <!-- ااستعلامات الشركاء > تقرير  الشركاء الاجمالى -->
+   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="Ist3lamtakreer_4orkaa">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">تقرير الشركاء الاجمالي</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/printer.png" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <table class="table-hover table-responsive-md table-responsive-sm  bg-white w-100 text-center ">
+                    <thead class="table-warning">
+                        <th>الشهر</th>
+                        <th>كود الشريك</th>
+                        <th>الشريك</th>
+                        <th>اجمالى حصص الشريك</th>
+                        <th>اجمالى مبالغ التأمين</th>
+                        <th>اجمالى المصاريف المشتركه</th>
+                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                       
+                         
+                        </tr>
+                  
+                
+                          
+                       
+                        
+                    </tbody>
+                </table>
+        
+                <div class="row pb-4">
+                    <div class="col-md-6 mt-5 text-md-center">
+                        <p class="">Page 1 of 1</p>
+                    </div>
+                    <div class="col-md-6 mt-5 text-md-center">
+                        <p class="">Tuesday, May 31, 2022</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+ <!-- -------------------------------------- -->
+
+
+
+
+
+
+
+<!-- ااستعلامات الشركات > المصاريف المشتركة -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="Ist3lmMsaref_mo4trka2">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">تقرير المصاريف الشهرية المشتركة</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/printer.png" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="container-fluid p-0">
+                    <table class="  bg-white w-100  table-hover table-responsive-md table-responsive-sm">
+                        <thead class=" table-warning">
+                            <th>التاريخ</th>
+                            <th> كود العقد</th>
+                            <th>الشركة</th>
+                            <th>عدد الشركاء</th>
+                            <th >الشريك</th>
+                            <th>كود المصروفات</th>
+                            <th>اجمالى المبلغ</th>
+                            <th>نسبة الشريك من المصاريف</th>
+                            <th>البيان</th>
+                            
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>      
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">اجمالى الشريك</td>
+                                <td></td>
+                                <td></td>
+                                <td>00.0</td>
+                                <td></td>      
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">الاجمالى الشهرى</td>
+                                <td></td>
+                                <td></td>
+                                <td>00.0</td>
+                                <td></td>      
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">الاجمالى الكلى</td>
+                                <td></td>
+                                <td></td>
+                                <td>00.0</td>
+                                <td></td>      
+                            </tr>
+                      
+                    
+                              
+                           </tr>
+                            
+                        </tbody>
+                    </table>
+             
+             
+             
+                    <div class="row pb-4">
+                        <div class="col-md-6 col-sm-12 mt-5 text-md-center">
+                            <p class="h4">Page 1 of 1</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-5 text-md-center">
+                            <p class="h4">Tuesday, May 31, 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+    </div>
+</div>
+ <!-- -------------------------------------- -->
+
+
+<!-- ااستعلامات الشركات > مبالغ  التأمين -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="Ist3lamMbale8_tameen2">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">تقرير مبالغ التأمين الشهرية</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/printer.png" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="container-fluid p-0 w-100">
+                    <table class="  bg-white w-100  col-sm-12 table-hover table-responsive-md table-responsive-sm">
+                        <thead class=" table-warning">
+                            <th>الشهر</th>
+                            <th>كود العملية</th>
+                            <th>الشركة</th>
+                            <th>مبلغ التأمين الكلى</th>
+                            <th>عدد الشركاء</th>
+                            <th>ما يتحمله الفرد</th>
+                            <th>ما تتحمله المنشأة</th>
+                            <th>اجمالى مبلغ التأمين</th>
+                            
+                            <th>الشريك</th>
+                            
+                            <th>صافى مبلغ التأمين الخاص بالشريك</th>
+                           
+                            
+                        </thead>
+                        
+                        <tbody>
+                             <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>  
+                                <td></td>                                   
+                                <td></td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>  
+                                <td>نوال</td>                                   
+                                <td>-17,777.78</td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="color: brown;font-weight: bold;">اجمالى الشهر</td>                                   
+                                <td>00.0</td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>                                   
+                                <td style="color: brown;font-weight: bold;">اجمالى الكلى</td>                                  
+                                <td>00.0</td>
+                             </tr>
+                              
+                          
+                            
+                        </tbody>
+                    </table>
+             
+                    <div class="row pb-4">
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Page 1 of 1</p>
+                        </div>
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Tuesday, May 31, 2022</p>
+                        </div>
+             
+                       
+                    </div>
+                  
+             
+                   
+                 </div>
+            </div>
+          </div>
+    </div>
+</div>
+ <!-- -------------------------------------- -->
+
+
+<!-- ااستعلامات الشركات > حصص الشركاء -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="Ist3lamhesas_4orkaa2">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">تقرير الشركاء</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column proccess" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/pdf.jpg" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                    <div class="d-flex flex-column proccess mr-3" style="width: 60px;">
+                        <button class="mb-2" style="height: 60px;border: none;box-shadow: 0 0 5px 0 rgb(116, 116, 116); border-radius: 5px; overflow: hidden;">
+                            <img src="img/printer.png" alt="" class="w-100 h-100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="container-fluid p-0 w-100">
+                    <table class="  bg-white w-100  col-sm-12 table-hover table-responsive-md table-responsive-sm">
+                        <thead class=" table-warning">
+                            <th>الشهر</th>
+                            <th>الشركه</th>
+                            <th>مبلغ المبيع</th>
+                            <th>مبلغ العمولة</th>
+                            <th>اشعارات الضرائب</th>
+                            <th>صافى مبلغ العمولة</th>
+                            <th>حصة الادارة</th>
+                            <th>صافى العموله دون حصة الادارة</th>
+                            <th>فرق مبلغ ايجار السيارات</th>
+                            <th>الشريك</th>
+                            <th>صافى مبلغ السيارات لكل شريك</th>
+                            <th>صافى حصة الشريك</th>
+                            <th>اجمالى حصة الشريك</th>   
+                        </thead>
+                        
+                        <tbody>
+                             <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>نوال</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                                
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ياسمين</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>هشام</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                                <td>00.0</td>  
+                             </tr>
+                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-danger">اجمالي الشهر</td>
+                                <td>00.0</td>
+                                <td>00.0</td>
+                             </tr>
+                          
+                            
+                        </tbody>
+                    </table>
+             
+                    <div class="row pb-4">
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Page 1 of 1</p>
+                        </div>
+                        <div class="col-md-6 mt-5 text-md-center">
+                            <p class="h4">Tuesday, May 31, 2022</p>
+                        </div>
+             
+                       
+                    </div>
+                  
+             
+                   
+                 </div>
+            </div>
+          </div>
+    </div>
+</div>
+ <!-- -------------------------------------- -->
+
+
+ <!-- -------- اضفة شريك -->
+ <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="t3ref_shrek">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+            <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="exampleModalLabel">تعريف شريك جديد</h4>
+            <div class=""></div>
+           
+        </div>
+        <form action="" id="t3ref_shrek_form">
+            <div class="modal-body">
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <label class="mx-1" for="newcode">كود جديد </label>
+                    <input type="number " class="form-control" value="(New)" name="newcode" id="newcode" readonly><br>
+    
+                    </div>
+                    <div class="mx-5" id="t3ref_shrek_addPartner">
+                     <i class="fa fa-plus-circle" style="font-size: 50px;border: 1px solid black;padding: 7px;"></i>
+    
+                    </div>
+                  </div>
+              
+                  <div class="row mt-5">
+                    <div class="newInterface col-md-12">
+                      <div class="newInterface1 py-5 h-100" style="border: 1px dashed black;position: relative;">
+                        <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">تعريف شريك جديد</h5>
+                        <div class=" px-2">
+                          <div class="d-flex justify-content-between align-items-center my-3">
+                            <label class="mx-1" for="partnerName"> الأسم </label>
+                            <input type="text" class="form-control w-75" name="partnerName" id="partnerName"><br>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center my-3">
+                            <label class="mx-1" for="partnerPhone">رقم الهاتف   </label>
+                            <input type="text" class="form-control w-75" name="partnerPhone" id="partnerPhone"><br>
+                            </select><br>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center my-3">
+                            <label class="mx-1" for="partnerGover">العنوان </label>
+                            <input type="text" class="form-control w-75" name="partnerGover" id="partnerGover"><br>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center my-3">
+                            <label class="mx-1" for="partnerNote">ملاحظات </label>
+                            <input type="text" class="form-control w-75" name="partnerNote" id="partnerNote"><br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                 
+              
+                  </div>
+                 
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ <!-- ------------------------------------------------------- -->
+
+  <!-- -------- اضفة شركة -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="t3ref_shrekaa">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+            <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="exampleModalLabel">تعريف شركة جديدة</h4>
+            <div class=""></div>
+           
+        </div>
+        <form action="" id="t3ref_shrekaa_form">
+            <div class="modal-body">
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <label class="mx-1" for="newcode">كود جديد </label>
+                    <input type="number " class="form-control" value="(New)" name="newcode" id="newcode" readonly><br>
+    
+                    </div>
+                    <div class="mx-5" id="t3ref_shrekaa_addCompany">
+                     <i class="fa fa-plus-circle" style="font-size: 50px;border: 1px solid black;padding: 7px;"></i>
+    
+                    </div>
+                  </div>
+              
+                  <div class="row mt-5">
+                    <div class="newInterface col-md-12">
+                      <div class="newInterface1 py-5 h-100" style="border: 1px dashed black;position: relative;">
+                        <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">تعريف شركة جديدة </h5>
+                        <div class=" px-2">
+                          <div class="d-flex justify-content-between align-items-center my-3">
+                            <label class="mx-1" for="companyName"> اسم الشركة </label>
+                            <input type="text" class="form-control w-75" name="companyName" id="companyName"><br>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center my-3">
+                            <label class="mx-1" for="companyPhone">رقم الهاتف   </label>
+                            <input type="text" class="form-control w-75" name="companyPhone" id="companyPhone"><br>
+                            </select><br>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center my-3">
+                            <label class="mx-1" for="companyGover">العنوان </label>
+                            <input type="text" class="form-control w-75" name="companyGover" id="companyGover"><br>
+                          </div>
+                       
+                        </div>
+                      </div>
+                    </div>
+                 
+              
+                  </div>
+                 
+            </div>
+        </form>
+      </div>
+    </div>
+</div>
+ 
+ <!-- --------------------------------------------------------------------------- -->
+  
+
+ <script src="js/main.js" type="module"></script>
+</body>
+</html>
