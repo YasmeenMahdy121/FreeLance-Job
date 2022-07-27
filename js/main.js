@@ -43,11 +43,13 @@ partnerGover = document.getElementById('partnerGover'),
 partnerNote = document.getElementById('partnerNote'),
 
 // المبيعات الشهرية
+mbe3at4hriaCode = document.getElementById("mbe3at_4hria_code"),
 mbe3at4hriaProccessDate = document.getElementById('mbe3at_4hria_date'),
 mbe3at4hriaInterfaceCode = document.getElementById('mbe3at_4hria_interfaceCode'),
 mbe3at4hriaTotalSales = document.getElementById('mbe3at_4hria_totalSales'),
 mbe3at4hriaDifferenceAmount = document.getElementById('mbe3at_4hria_difference-amount'),
 mbe3at4hriaAddMonthlySalesBtn = document.getElementById('add_monthly_sales_btn'),
+
 // المصاريف الشهرية
 msaref4hriaProccessType = document.getElementById('msaref_4hria_proccessType'),
 msaref4hriaProccessDate = document.getElementById('msaref_4hria_Date'),
@@ -60,7 +62,10 @@ mbale8Tameen4hriaInterfaceCode = document.getElementById('mbale8_tameen_4hria_in
 mbale8Tameen4hriaTotalAmmount = document.getElementById('mbale8_tameen_4hria_total_ammount'),
 mbale8Tameen4hriaPeopleNumber = document.getElementById('mbale8_tameen_4hria_peopleNumber'),
 mbale8Tameen4hriaInsuranceAmmountBtn = document.getElementById('add_monthly_insuranceAmmount_btn')
-// 
+
+
+// -------------------------------------------------------------------------------------------------------------
+// اضفة عقد جديد Script
 let contract = {}
 contract.PartnerDetails = []
 
@@ -278,17 +283,7 @@ function getCompanies(){
 }
 
 async function setContractCode(){
-    // onSnapshot(collection(firestore, "contractCode"), (data) => {  
-    //     contractCode = ''            
-    //     for(let item of data.docs){  
-    //         contractCode = item.data().code
-            
-    //     }  
-    //     contractCode = contractCode? contractCode : 1   
-    //     document.querySelectorAll('.contractCode').forEach(code=>{
-    //         code.value = contractCode
-    //     }) 
-    //   });
+  
 
     const contractCodeRef = collection(firestore, "contractCode");
 
@@ -301,4 +296,87 @@ async function setContractCode(){
     document.querySelectorAll('#aqd_4araka_gded_form .contractCode').forEach(code=>{
         code.value = contractCode
     }) 
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// script المبيعات الشهرية
+
+// mbe3at4hriaCode = document.getElementById("mbe3at_4hriac_code")
+// mbe3at4hriaProccessDate = document.getElementById('mbe3at_4hria_date'),
+// mbe3at4hriaInterfaceCode = document.getElementById('mbe3at_4hria_interfaceCode'),
+// mbe3at4hriaTotalSales = document.getElementById('mbe3at_4hria_totalSales'),
+// mbe3at4hriaDifferenceAmount = document.getElementById('mbe3at_4hria_difference-amount'),
+// mbe3at4hriaAddMonthlySalesBtn = document.getElementById('add_monthly_sales_btn'),
+let monthlySalesCode=0
+async function transformInformation(e) {
+    e.preventDefault()
+
+    if (mbe3at4hriaCode.value!== ''&&mbe3at4hriaProccessDate.value!== ''&&mbe3at4hriaInterfaceCode.value!== ''&&mbe3at4hriaTotalSales.value!==''&&mbe3at4hriaDifferenceAmount.value!=='') {
+          
+  let  monthlySales={
+    mbe3at4hriaCode:mbe3at4hriaCode.value,
+    mbe3at4hriaProccessDate:mbe3at4hriaProccessDate.value,
+    mbe3at4hriaInterfaceCode:mbe3at4hriaInterfaceCode.value,
+    mbe3at4hriaTotalSales:mbe3at4hriaTotalSales.value,
+    mbe3at4hriaDifferenceAmount:mbe3at4hriaDifferenceAmount.value,
+}
+
+console.log(monthlySales);
+const contractRef = await addDoc(collection(firestore, "monthlySales"), monthlySales);
+const contractCodeRef = await setDoc(doc(firestore, "monthlySalesCode", "monthlySalesCode"), {
+    code:++monthlySalesCode
+  });
+  $("#mbe3at_4hria").modal('hide')
+  $('#mbe3at_4hria_form')[0].reset()
+  mbe3at4hriaCode.value='(New)'
+    }
+}
+mbe3at4hriaAddMonthlySalesBtn.addEventListener("click",transformInformation)
+
+
+function getContractsOfCompany() {
+    
+    onSnapshot(collection(firestore, "contracts"), (contracts) => {
+        mbe3at4hriaInterfaceCode.innerHTML='<option value="" disabled selected></option>'
+              for(let contract of contracts.docs){
+                 let dataOption=document.createElement('option')
+                // dataOption.innerHTML=`<div ">name : code</div>`
+                //contractCode
+                dataOption.value=contract.data().contractCode
+                 dataOption.innerHTML=`
+                 
+                 <div>
+                ${contract.data().contractCode} :  ${contract.data().CompanyDetails.companyName}
+                 </div>`
+                 mbe3at4hriaInterfaceCode.appendChild(dataOption)
+           
+                }
+        
+      });
+}
+
+window.onload=getContractsOfCompany
+// mbe3at4hriaInterfaceCode
+// contracts
+
+mbe3at4hriaInterfaceCode.addEventListener("change",monthlySalesChangeCode)
+async function monthlySalesChangeCode() {
+    // mbe3at4hriaCode 
+    
+    const monthlySalesCodeRef = collection(firestore, "monthlySalesCode");
+
+    const q = query(monthlySalesCodeRef);
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((code) => {
+        monthlySalesCode = code.data().code
+    });
+    monthlySalesCode = monthlySalesCode? monthlySalesCode : 1   
+    mbe3at4hriaCode.value = monthlySalesCode
+    console.log(monthlySalesCode);
+    // monthlySalesSetCode()
+}
+
+function monthlySalesSetCode() {
+
+    
 }

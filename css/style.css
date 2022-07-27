@@ -423,3 +423,14 @@ h1,th
   #aqd_4araka_gded .dropdown-item{
     cursor: pointer;
   }
+
+#mbe3at_4hria_form  input:focus
+{
+    box-shadow: none;
+    border: 1px solid gainsboro;
+}
+#mbe3at_4hria_form  select:focus
+{
+    box-shadow: none;
+    border: 1px solid gainsboro;
+}

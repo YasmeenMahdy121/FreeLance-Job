@@ -381,12 +381,12 @@
                 <h5 class="modal-title text-center w-100" id="exampleModalLabel">اضافة مبالغ المبيعات الشهرية</h5>
             </div>
             <div class="modal-body py-5">
-                <form style="border: 1px dashed black;position: relative;" class="  d-flex  align-items-center   " >
+                <form id="mbe3at_4hria_form" style="border: 1px dashed black;position: relative;" class="  d-flex  align-items-center   " >
                     <h5 class="font-weight-bolder text-md-center  text-danger position-absolute details">تفاصيل العملية</h5>
                            <div class=" py-5 pr-5 w-75 labels">
                            <div class="d-flex justify-content-between align-items-center my-3">
-                            <label for="code" class="w-25" >كود العملية  </label>
-                            <input type="text" class="form-control w-50 text-center" name="code" id="code" value="(New)" readonly><br>
+                            <label for="mbe3at_4hria_code" class="w-25" >كود العملية  </label>
+                            <input type="text" class="form-control w-50 text-center" name="code" id="mbe3at_4hria_code" value="(New)" readonly><br>
                            </div>
         
         
@@ -398,7 +398,14 @@
         
                            <div class="d-flex justify-content-between align-items-center my-3">
                             <label for="mbe3at_4hria_interfaceCode" class="w-25">كود عقد الشركة </label>
-                            <select type="number" class="form-control w-50" name="mbe3at_4hria_interfaceCode" id="mbe3at_4hria_interfaceCode"></select><br>
+                            <select type="number" class="form-control w-50" name="mbe3at_4hria_interfaceCode" id="mbe3at_4hria_interfaceCode">
+                                <option value="" disabled></option>
+                                <option value="ay7aga" class="">
+                                    <div class="text-danger">name :</div>
+                                    <div>data</div>
+                                    
+                                </option>
+                            </select><br>
                            </div>
                             
                            <div class="d-flex justify-content-between align-items-center my-3">
@@ -412,7 +419,7 @@
                            </div>
                             
                            </div>
-                           <div class="d-flex flex-column proccess" id="add-monthly-sales-btn">
+                           <div class="d-flex flex-column proccess" id="add_monthly_sales_btn">
                                 <button class="mb-2">
                                     <img src="img/$.png" alt="" class="w-100 h-100">
                                 </button>
