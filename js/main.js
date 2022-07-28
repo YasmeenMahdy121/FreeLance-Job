@@ -57,6 +57,7 @@ msaref4hriaValue = document.getElementById('msaref_4hria_value'),
 msaref4hriaStatement = document.getElementById('msaref_4hria_statement'),
 msaref4hriaAddMonthlyExpensesBtn = document.getElementById('add_monthly_expenses_btn'),
 // مبالغ التامين الشهرية
+mbal8Elt2men4ahtiaCode = document.getElementById("mbal8_Elt2men_4hria_code"),
 mbale8Tameen4hriaProccessDate = document.getElementById('mbale8_tameen_4hria_date'),
 mbale8Tameen4hriaInterfaceCode = document.getElementById('mbale8_tameen_4hria_interfaceCode'),
 mbale8Tameen4hriaTotalAmmount = document.getElementById('mbale8_tameen_4hria_total_ammount'),
@@ -301,12 +302,6 @@ async function setContractCode(){
 // --------------------------------------------------------------------------------------------------------------------
 // script المبيعات الشهرية
 
-// mbe3at4hriaCode = document.getElementById("mbe3at_4hriac_code")
-// mbe3at4hriaProccessDate = document.getElementById('mbe3at_4hria_date'),
-// mbe3at4hriaInterfaceCode = document.getElementById('mbe3at_4hria_interfaceCode'),
-// mbe3at4hriaTotalSales = document.getElementById('mbe3at_4hria_totalSales'),
-// mbe3at4hriaDifferenceAmount = document.getElementById('mbe3at_4hria_difference-amount'),
-// mbe3at4hriaAddMonthlySalesBtn = document.getElementById('add_monthly_sales_btn'),
 let monthlySalesCode=0
 async function transformInformation(e) {
     e.preventDefault()
@@ -356,8 +351,7 @@ function getContractsOfCompany() {
 }
 
 window.onload=getContractsOfCompany
-// mbe3at4hriaInterfaceCode
-// contracts
+
 
 mbe3at4hriaInterfaceCode.addEventListener("change",monthlySalesChangeCode)
 async function monthlySalesChangeCode() {
@@ -373,10 +367,86 @@ async function monthlySalesChangeCode() {
     monthlySalesCode = monthlySalesCode? monthlySalesCode : 1   
     mbe3at4hriaCode.value = monthlySalesCode
     console.log(monthlySalesCode);
-    // monthlySalesSetCode()
+   
 }
 
-function monthlySalesSetCode() {
+// ---------------------------------------------------------------------------------
 
+// script مبالغ التأمين الشهرية
+
+// mbal8Elt2men4ahtiaCode = document.getElementById("mbal8_Elt2men_4hria_code"),
+// mbale8Tameen4hriaProccessDate = document.getElementById('mbale8_tameen_4hria_date'),
+// mbale8Tameen4hriaInterfaceCode = document.getElementById('mbale8_tameen_4hria_interfaceCode'),
+// mbale8Tameen4hriaTotalAmmount = document.getElementById('mbale8_tameen_4hria_total_ammount'),
+// mbale8Tameen4hriaPeopleNumber = document.getElementById('mbale8_tameen_4hria_peopleNumber'),
+// mbale8Tameen4hriaInsuranceAmmountBtn = document.getElementById('add_monthly_insuranceAmmount_btn')
+
+
+
+let monthlySafeCode=0
+async function transformInformationOfSafely(e) {
+    e.preventDefault()
+
+    if (mbal8Elt2men4ahtiaCode.value!== ''&&mbale8Tameen4hriaProccessDate.value!== ''&&mbale8Tameen4hriaInterfaceCode.value!== ''&&mbale8Tameen4hriaPeopleNumber.value!==''&&mbale8Tameen4hriaTotalAmmount.value!=='') {
+          
+  let  monthlySafe={
+    mbal8Elt2men4ahtiaCode:mbal8Elt2men4ahtiaCode.value,
+    mbale8Tameen4hriaProccessDate:mbale8Tameen4hriaProccessDate.value,
+    mbale8Tameen4hriaInterfaceCode:mbale8Tameen4hriaInterfaceCode.value,
+    mbale8Tameen4hriaPeopleNumber:mbale8Tameen4hriaPeopleNumber.value,
+    mbale8Tameen4hriaTotalAmmount:mbale8Tameen4hriaTotalAmmount.value,
+}
+
+
+const contractRef = await addDoc(collection(firestore, "monthlySafely"), monthlySafe);
+const contractCodeRef = await setDoc(doc(firestore, "monthlySafelyCode", "monthlySafelyCode"), {
+    code:++monthlySafeCode
+  });
+  $("#mbale8_tameen_4hria").modal('hide')
+  $('#mabla8_elt2men_4hria_form')[0].reset()
+  mbal8Elt2men4ahtiaCode.value='(New)'
+    }
+}
+mbale8Tameen4hriaInsuranceAmmountBtn.addEventListener("click",transformInformationOfSafely)
+
+
+function getContractsOfCompanyByMonthlySafely() {
     
+    onSnapshot(collection(firestore, "contracts"), (contracts) => {
+        mbale8Tameen4hriaInterfaceCode.innerHTML='<option value="" disabled selected></option>'
+              for(let contract of contracts.docs){
+                 let dataOption=document.createElement('option')
+                // dataOption.innerHTML=`<div ">name : code</div>`
+                //contractCode
+                dataOption.value=contract.data().contractCode
+                 dataOption.innerHTML=`
+                 
+                 <div>
+                ${contract.data().contractCode} :  ${contract.data().CompanyDetails.companyName}
+                 </div>`
+                 mbale8Tameen4hriaInterfaceCode.appendChild(dataOption)
+           
+                }
+        
+      });
+}
+
+window.onload=getContractsOfCompanyByMonthlySafely
+
+
+mbale8Tameen4hriaInterfaceCode.addEventListener("change",monthlySafelyChangeCode)
+async function monthlySafelyChangeCode() {
+    
+    
+    const monthlySafelyCodeRef = collection(firestore, "monthlySafelyCode");
+
+    const q = query(monthlySafelyCodeRef);
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((code) => {
+        monthlySafeCode = code.data().code
+    });
+    monthlySafeCode = monthlySafeCode? monthlySafeCode : 1   
+    mbal8Elt2men4ahtiaCode.value = monthlySafeCode
+    console.log(monthlySafeCode);
+   
 }

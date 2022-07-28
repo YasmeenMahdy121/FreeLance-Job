@@ -434,3 +434,15 @@ h1,th
     box-shadow: none;
     border: 1px solid gainsboro;
 }
+
+
+#mabla8_elt2men_4hria_form  input:focus
+{
+    box-shadow: none;
+    border: 1px solid gainsboro;
+}
+#mabla8_elt2men_4hria_form  select:focus
+{
+    box-shadow: none;
+    border: 1px solid gainsboro;
+}
