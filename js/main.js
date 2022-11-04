@@ -51,7 +51,10 @@ mbe3at4hriaDifferenceAmount = document.getElementById('mbe3at_4hria_difference-a
 mbe3at4hriaAddMonthlySalesBtn = document.getElementById('add_monthly_sales_btn'),
 
 // المصاريف الشهرية
+msaref4hriaCode = document.getElementById("msaref_4hria__code"),
 msaref4hriaProccessType = document.getElementById('msaref_4hria_proccessType'),
+msaref4hriaCompanyCode = document.getElementById("msaref_4hria_companyCode"),
+msaref4hriaPartnerCode = document.getElementById("msaref_4hria_partnerCode"),
 msaref4hriaProccessDate = document.getElementById('msaref_4hria_Date'),
 msaref4hriaValue = document.getElementById('msaref_4hria_value'),
 msaref4hriaStatement = document.getElementById('msaref_4hria_statement'),
@@ -308,22 +311,22 @@ async function transformInformation(e) {
 
     if (mbe3at4hriaCode.value!== ''&&mbe3at4hriaProccessDate.value!== ''&&mbe3at4hriaInterfaceCode.value!== ''&&mbe3at4hriaTotalSales.value!==''&&mbe3at4hriaDifferenceAmount.value!=='') {
           
-  let  monthlySales={
-    mbe3at4hriaCode:mbe3at4hriaCode.value,
-    mbe3at4hriaProccessDate:mbe3at4hriaProccessDate.value,
-    mbe3at4hriaInterfaceCode:mbe3at4hriaInterfaceCode.value,
-    mbe3at4hriaTotalSales:mbe3at4hriaTotalSales.value,
-    mbe3at4hriaDifferenceAmount:mbe3at4hriaDifferenceAmount.value,
-}
+        let  monthlySales={
+            mbe3at4hriaCode:mbe3at4hriaCode.value,
+            mbe3at4hriaProccessDate:mbe3at4hriaProccessDate.value,
+            mbe3at4hriaInterfaceCode:mbe3at4hriaInterfaceCode.value,
+            mbe3at4hriaTotalSales:mbe3at4hriaTotalSales.value,
+            mbe3at4hriaDifferenceAmount:mbe3at4hriaDifferenceAmount.value,
+        }
 
-console.log(monthlySales);
-const contractRef = await addDoc(collection(firestore, "monthlySales"), monthlySales);
-const contractCodeRef = await setDoc(doc(firestore, "monthlySalesCode", "monthlySalesCode"), {
-    code:++monthlySalesCode
-  });
-  $("#mbe3at_4hria").modal('hide')
-  $('#mbe3at_4hria_form')[0].reset()
-  mbe3at4hriaCode.value='(New)'
+        console.log(monthlySales);
+        const contractRef = await addDoc(collection(firestore, "monthlySales"), monthlySales);
+        const contractCodeRef = await setDoc(doc(firestore, "monthlySalesCode", "monthlySalesCode"), {
+            code:++monthlySalesCode
+        });
+        $("#mbe3at_4hria").modal('hide')
+        $('#mbe3at_4hria_form')[0].reset()
+        mbe3at4hriaCode.value='(New)'
     }
 }
 mbe3at4hriaAddMonthlySalesBtn.addEventListener("click",transformInformation)
@@ -335,8 +338,6 @@ function getContractsOfCompany() {
         mbe3at4hriaInterfaceCode.innerHTML='<option value="" disabled selected></option>'
               for(let contract of contracts.docs){
                  let dataOption=document.createElement('option')
-                // dataOption.innerHTML=`<div ">name : code</div>`
-                //contractCode
                 dataOption.value=contract.data().contractCode
                  dataOption.innerHTML=`
                  
@@ -374,15 +375,6 @@ async function monthlySalesChangeCode() {
 
 // script مبالغ التأمين الشهرية
 
-// mbal8Elt2men4ahtiaCode = document.getElementById("mbal8_Elt2men_4hria_code"),
-// mbale8Tameen4hriaProccessDate = document.getElementById('mbale8_tameen_4hria_date'),
-// mbale8Tameen4hriaInterfaceCode = document.getElementById('mbale8_tameen_4hria_interfaceCode'),
-// mbale8Tameen4hriaTotalAmmount = document.getElementById('mbale8_tameen_4hria_total_ammount'),
-// mbale8Tameen4hriaPeopleNumber = document.getElementById('mbale8_tameen_4hria_peopleNumber'),
-// mbale8Tameen4hriaInsuranceAmmountBtn = document.getElementById('add_monthly_insuranceAmmount_btn')
-
-
-
 let monthlySafeCode=0
 async function transformInformationOfSafely(e) {
     e.preventDefault()
@@ -398,8 +390,8 @@ async function transformInformationOfSafely(e) {
 }
 
 
-const contractRef = await addDoc(collection(firestore, "monthlySafely"), monthlySafe);
-const contractCodeRef = await setDoc(doc(firestore, "monthlySafelyCode", "monthlySafelyCode"), {
+const monthlySafelyRef = await addDoc(collection(firestore, "monthlySafely"), monthlySafe);
+const monthlySafelyCodeRef = await setDoc(doc(firestore, "monthlySafelyCode", "monthlySafelyCode"), {
     code:++monthlySafeCode
   });
   $("#mbale8_tameen_4hria").modal('hide')
@@ -449,4 +441,147 @@ async function monthlySafelyChangeCode() {
     mbal8Elt2men4ahtiaCode.value = monthlySafeCode
     console.log(monthlySafeCode);
    
+}
+
+// script المصاريف الشهرية
+
+let companyMonthlyExpenses = document.getElementById('company_monthly_expenses')
+let partnerMonthlyExpenses = document.getElementById('partner_monthly_expenses')
+let monthlyExpensesCode = ''
+msaref4hriaProccessType.addEventListener("change",function(e){
+    monthlyExpensesProccessType(e)
+})
+
+function monthlyExpensesProccessType(e){
+    if(e.target.value==1){
+        // show company code
+        companyMonthlyExpenses.setAttribute('style', 'display: flex !important;')
+        partnerMonthlyExpenses.setAttribute('style', 'display: none !important;')
+        getContractsOfCompanyByMonthlyExpenses()
+    }
+    else{
+        // show partner code
+        companyMonthlyExpenses.setAttribute('style', 'display: none !important;')
+        partnerMonthlyExpenses.setAttribute('style', 'display: flex !important;')
+        getPartnersByMonthlyExpenses()
+    }
+}
+
+function getContractsOfCompanyByMonthlyExpenses() {
+    
+    onSnapshot(collection(firestore, "contracts"), (contracts) => {
+        msaref4hriaCompanyCode.innerHTML='<option value="" disabled selected></option>'
+              for(let contract of contracts.docs){
+                 let dataOption=document.createElement('option')
+                
+                dataOption.value=contract.data().contractCode
+                 dataOption.innerHTML=`
+                 
+                 <div>
+                ${contract.data().contractCode} :  ${contract.data().CompanyDetails.companyName}
+                 </div>`
+                 msaref4hriaCompanyCode.appendChild(dataOption)
+           
+                }
+        
+      });
+}
+
+function getPartnersByMonthlyExpenses() {
+    
+    onSnapshot(collection(firestore, "partners"), (partners) => {
+        msaref4hriaPartnerCode.innerHTML='<option value="" disabled selected></option>'
+              for(let partner of partners.docs){
+                 let dataOption=document.createElement('option')
+                
+                dataOption.value=partner.id
+                 dataOption.innerHTML=`
+                 
+                 <div>
+                ${partner.data().partnerName}
+                 </div>`
+                 msaref4hriaPartnerCode.appendChild(dataOption)
+           
+                }
+        
+      });
+}
+
+msaref4hriaCompanyCode.addEventListener("change",monthlyExpensesChangeCode)
+msaref4hriaPartnerCode.addEventListener("change",monthlyExpensesChangeCode)
+async function monthlyExpensesChangeCode() {
+    
+    const monthlyExpensesCompanyCodeRef = collection(firestore, "monthlyExpensesCode");
+
+    const q = query(monthlyExpensesCompanyCodeRef);
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((code) => {
+        monthlyExpensesCode = code.data().code
+    });
+    monthlyExpensesCode = monthlyExpensesCode? monthlyExpensesCode : 1   
+    msaref4hriaCode.value = monthlyExpensesCode
+   
+}
+
+function transformInformationOfMonthlyExpenses(e) {
+    e.preventDefault()
+
+    let  monthlyExpenses={}
+    if (msaref4hriaCode.value!== ''&&msaref4hriaProccessType.value!== ''&&msaref4hriaProccessDate.value!== ''&&msaref4hriaValue.value!==''&&msaref4hriaStatement.value!=='') {
+                
+        monthlyExpenses={
+            msaref4hriaCode:msaref4hriaCode.value,
+            msaref4hriaProccessType:msaref4hriaProccessType.value==1?'shared':'private',
+            msaref4hriaProccessDate:msaref4hriaProccessDate.value,
+            msaref4hriaValue:msaref4hriaValue.value,
+            msaref4hriaStatement:msaref4hriaStatement.value,
+        }
+
+        if(msaref4hriaProccessType.value==1&&msaref4hriaCompanyCode.value!=''){
+            // add contract code
+            monthlyExpenses.companyContractCode = msaref4hriaCompanyCode.value
+            saveToFirebase(monthlyExpenses)
+        }
+        else if(msaref4hriaPartnerCode.value!=''){
+            // add partner id
+            monthlyExpenses.partnerID = msaref4hriaPartnerCode.value
+            saveToFirebase(monthlyExpenses)
+        }
+
+    }
+}
+msaref4hriaAddMonthlyExpensesBtn.addEventListener("click",transformInformationOfMonthlyExpenses)
+
+async function saveToFirebase(monthlyExpenses){
+    const monthlyExpensesRef = await addDoc(collection(firestore, "monthlyExpenses"), monthlyExpenses);
+    const monthlyExpensesCodeRef = await setDoc(doc(firestore, "monthlyExpensesCode", "monthlyExpensesCode"), {
+        code:++monthlyExpensesCode
+    });
+    $("#msaref_4hria").modal('hide')
+    $('#msaref_4hria_form')[0].reset()
+    msaref4hriaCode.value = '(New)'
+}
+
+// script حصص الشركاء
+
+getContracts()
+function getContracts(){
+    onSnapshot(collection(firestore, "contracts"), (contracts) => {
+        let monthContract = new Object()
+              for(let contract of contracts.docs){
+                    if(monthContract[contract.data().contractDate]){
+                        monthContract[contract.data().contractDate].push(contract.data())
+                    }
+                    else{
+                        monthContract[contract.data().contractDate]=[contract.data()]
+                    }
+                    // var mydate = new Date(contract.data().contractDate);
+                    // var month = ["January", "February", "March", "April", "May", "June",
+                    // "July", "August", "September", "October", "November", "December"][mydate.getMonth()];
+                    // var str = month + ' ' + mydate.getFullYear();
+                    // console.log(str)
+                }
+                console.log(monthContract)
+        
+      });
 }

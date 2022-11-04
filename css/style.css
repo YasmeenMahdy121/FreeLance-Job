@@ -446,3 +446,9 @@ h1,th
     box-shadow: none;
     border: 1px solid gainsboro;
 }
+#company_monthly_expenses{
+    display: none !important;
+}
+#partner_monthly_expenses{
+    display: none !important;
+}
