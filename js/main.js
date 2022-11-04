@@ -2,13 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase
 import {getFirestore, onSnapshot, collection, doc, addDoc, setDoc,query,where,getDocs} from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAsUkALJYLnSbSatk3U7D3oIJIIojlf0do",
-  authDomain: "freelance-2537d.firebaseapp.com",
-  projectId: "freelance-2537d",
-  storageBucket: "freelance-2537d.appspot.com",
-  messagingSenderId: "1020536009338",
-  appId: "1:1020536009338:web:0133bd1e8d322f17f0c1c3",
-  measurementId: "G-K65Q4MZ9RD"
+    apiKey: "AIzaSyDNsjynvfjurb26aw9j_5uXxsUm0zPJOpo",
+  authDomain: "school-4e452.firebaseapp.com",
+  projectId: "school-4e452",
+  storageBucket: "school-4e452.appspot.com",
+  messagingSenderId: "1009189022376",
+  appId: "1:1009189022376:web:af6e257b40d6bb7c20309d",
+  measurementId: "G-PJHDM9YEB8"
 };
 
 // Initialize Firebase
@@ -336,22 +336,24 @@ function getContractsOfCompany() {
     
     onSnapshot(collection(firestore, "contracts"), (contracts) => {
         mbe3at4hriaInterfaceCode.innerHTML='<option value="" disabled selected></option>'
-              for(let contract of contracts.docs){
-                 let dataOption=document.createElement('option')
-                dataOption.value=contract.data().contractCode
-                 dataOption.innerHTML=`
-                 
-                 <div>
-                ${contract.data().contractCode} :  ${contract.data().CompanyDetails.companyName}
-                 </div>`
-                 mbe3at4hriaInterfaceCode.appendChild(dataOption)
-           
-                }
+        for(let contract of contracts.docs){
+            
+            let dataOption=document.createElement('option')
+            dataOption.value=contract.data().contractCode
+            dataOption.innerHTML=`
+            
+            <div>
+            ${contract.data().contractCode} :  ${contract.data().CompanyDetails.companyName}
+            </div>`
+            mbe3at4hriaInterfaceCode.appendChild(dataOption)
+            
+        }
+        console.log(mbe3at4hriaInterfaceCode);
         
       });
 }
 
-window.onload=getContractsOfCompany
+getContractsOfCompany()
 
 
 mbe3at4hriaInterfaceCode.addEventListener("change",monthlySalesChangeCode)
@@ -575,11 +577,11 @@ function getContracts(){
                     else{
                         monthContract[contract.data().contractDate]=[contract.data()]
                     }
-                    // var mydate = new Date(contract.data().contractDate);
-                    // var month = ["January", "February", "March", "April", "May", "June",
-                    // "July", "August", "September", "October", "November", "December"][mydate.getMonth()];
-                    // var str = month + ' ' + mydate.getFullYear();
-                    // console.log(str)
+                    var mydate = new Date(contract.data().contractDate);
+                    var month = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"][mydate.getMonth()];
+                    var str = month + ' ' + mydate.getFullYear();
+                    console.log(str)
                 }
                 console.log(monthContract)
         
